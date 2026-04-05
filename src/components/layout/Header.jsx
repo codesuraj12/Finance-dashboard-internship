@@ -48,7 +48,7 @@ const Header = () => {
           <div className="w-64 h-full">
             <Sidebar />
           </div>
-          {/* Backdrop — click karo toh close */}
+         
           <div
             className="flex-1 bg-black/40"
             onClick={() => setMenuopen(false)}

@@ -4,7 +4,7 @@ import { Appcontext } from "../context/Appcontext";
 const Insights = () => {
   const { transactions } = useContext(Appcontext);
 
-  // 🔹 Income & Expense
+  // Income & Expense
   const income = transactions
     .filter((t) => t.type === "income")
     .reduce((acc, t) => acc + t.amount, 0);
@@ -13,7 +13,7 @@ const Insights = () => {
     .filter((t) => t.type === "expense")
     .reduce((acc, t) => acc + t.amount, 0);
 
-  // 🔹 Category-wise expense
+  // Category-wise expense
   const categoryMap = {};
   transactions.forEach((t) => {
     if (t.type === "expense") {
@@ -22,7 +22,7 @@ const Insights = () => {
     }
   });
 
-  // 🔹 Highest category
+  // Highest category
   let highestCategory = "N/A";
   let maxAmount = 0;
 
@@ -33,14 +33,14 @@ const Insights = () => {
     }
   }
 
-  // 🔹 Savings %
+  // Savings 
   const savingsRate =
     income > 0 ? (((income - expense) / income) * 100).toFixed(0) : 0;
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
 
-      {/* 🔹 Top Spending */}
+      {/* Top Spending */}
       <div className="bg-white p-5 rounded-xl shadow-md">
         <p className="text-sm text-gray-500">TOP SPENDING CATEGORY</p>
         <h2 className="text-xl font-semibold mt-1">
@@ -68,7 +68,7 @@ const Insights = () => {
         ))}
       </div>
 
-      {/* 🔹 Savings Rate */}
+      {/*  Savings Rate */}
       <div className="bg-white p-5 rounded-xl shadow-md">
         <p className="text-sm text-gray-500">SAVINGS RATE</p>
         <h2 className="text-2xl font-bold text-green-600 mt-2">
@@ -86,7 +86,7 @@ const Insights = () => {
         </div>
       </div>
 
-      {/* 🔹 Income vs Expense */}
+      {/* Income vs Expense */}
       <div className="bg-white p-5 rounded-xl shadow-md">
         <p className="text-sm text-gray-500">INCOME VS EXPENSE</p>
 

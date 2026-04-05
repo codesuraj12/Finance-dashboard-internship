@@ -14,7 +14,7 @@ const DashboardPage = () => {
     <Sidebar />
   </div>
    
-         {/* Main Content */}
+        
          <div className="flex-1 overflow-y-auto">
    
    

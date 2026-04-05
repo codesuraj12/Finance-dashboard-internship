@@ -8,7 +8,7 @@ const Transactions = () => {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("all");
 
-  // 🔹 Filter + Search logic
+  // Filter + Search logic
   const filteredData = transactions.filter((t) => {
     const matchesSearch =
       t.category.toLowerCase().includes(search.toLowerCase());
@@ -21,7 +21,7 @@ const Transactions = () => {
 
   return (
     <div>
-      {/* 🔹 Top Controls */}
+      {/* Top Controls */}
       <div className="flex flex-col md:flex-row justify-between gap-3 mb-4">
 
         {/* Search */}
@@ -52,7 +52,7 @@ const Transactions = () => {
         )}
       </div>
 
-      {/* 🔹 Table */}
+      {/* Table */}
       <div className="overflow-x-auto">
         <table className="w-full text-left border rounded-lg overflow-hidden">
 

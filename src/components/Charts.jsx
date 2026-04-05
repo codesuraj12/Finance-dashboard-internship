@@ -11,7 +11,7 @@ const COLORS = ["#3b82f6", "#ef4444", "#22c55e", "#f59e0b", "#8b5cf6", "#ec4899"
 const Charts = () => {
   const { transactions } = useContext(Appcontext);
 
-  // ── Line Chart Data ──────────────────────────────────────────
+  // Line Chart Data 
   // Group transactions by month → show Income vs Expense trend
   const monthlyMap = {};
 
@@ -33,7 +33,7 @@ const Charts = () => {
       };
     });
 
-  // ── Pie Chart Data ───────────────────────────────────────────
+  
   // Sum expenses per category
   const categoryMap = {};
 
@@ -47,7 +47,7 @@ const Charts = () => {
     value: categoryMap[key],
   }));
 
-  // ── Render ───────────────────────────────────────────────────
+
   return (
     <div className="flex flex-col md:flex-row gap-6 mt-6">
 

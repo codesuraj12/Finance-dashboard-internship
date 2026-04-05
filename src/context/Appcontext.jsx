@@ -7,6 +7,8 @@ export const Appcontext = createContext();
 
 
 export const AppProvider = ({children}) => {
+
+    // store data in transactions 
     const [transactions, setTransactions] = useState(data);
     const [role, setRole] = useState("viewer");
 
