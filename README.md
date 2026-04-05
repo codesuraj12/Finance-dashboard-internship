@@ -6,35 +6,27 @@ A simple and interactive personal finance dashboard built with React, Tailwind C
 
 ## Tech Stack
 
-React
-Tailwind CSS
-React Router DOM
-Recharts
-Context API
+- React
+- Tailwind CSS
+- React Router DOM
+- Recharts
+- Context API
 
 ---
 
 ## Implementation Details
-🔹 Project Setup
-Project initialized using Vite
-Folder structure organized for scalability
-🔹 Layout & Navigation
-Created DashboardPage as main layout
-Integrated Sidebar + Header
-Used React Router for navigation between:
-Overview
-Transactions
-Insights
-🔹 Role Switcher
-Implemented role switching (Viewer / Admin) inside Header
-Role state managed using Context API
-🔹 Icons
-Used Font Awesome CDN for icons:
+
+- Project initialized using **Vite**
+- Folder structure organized for scalability
+- **DashboardPage** used as persistent layout — Sidebar and Header stay fixed, only `<Outlet />` changes on navigation
+- **React Router v6** nested routes used for Overview, Transactions, Insights
+- **Font Awesome CDN** used for icons in sidebar
+```html
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 />
-
+```
 
 ## Getting Started
 
