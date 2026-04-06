@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Appcontext } from "../context/Appcontext";
 
-const SummaryCard = ({ title }) => {
+const SummaryCard = ({ title, background }) => {
   
 
 const {transactions} = useContext(Appcontext)
@@ -31,7 +31,7 @@ value = expense;
   }
 
   return (
-    <div className="bg-white shadow rounded-2xl p-4 flex flex-col justify-between h-32 hover:shadow-md transition">
+    <div className={`${background} border-l-2 hover:border-l-4 shadow rounded-2xl p-4 flex flex-col justify-between h-32 hover:shadow-lg transition transition-all`}>
       
       <h3 className="text-gray-500 text-sm font-medium">{title}</h3>
 

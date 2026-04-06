@@ -36,7 +36,7 @@ const Header = () => {
           className="md:hidden text-gray-700 text-2xl"
           onClick={() => setMenuopen(!menuopen)}
         >
-        <i class="fa-solid fa-bars"></i>
+        <i className="fa-solid fa-bars"></i>
         </button>
       <h1 className="text-2xl font-bold">{gettitle()}</h1>
       <RoleSwitcher role={role} setRole={setRole} />
